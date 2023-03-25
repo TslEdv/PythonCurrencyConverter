@@ -11,7 +11,7 @@ def get_currency_rate(from_currency, to_currency):
     elif (from_currency, to_currency) in exchange_rate_cache:
         return exchange_rate_cache[(from_currency, to_currency)]
     else:
-        url = f'https://v6.exchangerate-api.com/v6/0b91e568f5592bfa05e1f9ca/latest/{from_currency}'
+        url = f'https://v6.exchangerate-api.com/v6/<API-KEY>/latest/{from_currency}'
         response = requests.get(url)
 
         if response.status_code == 200:
